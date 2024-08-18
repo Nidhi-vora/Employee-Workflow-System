@@ -1,0 +1,24 @@
+#	Name	Type	Collation	Attributes	Null	Default	Comments	
+	1	aten_id Primary	int(20)			No	None		AUTO_INCREMENT		
+	2	atn_user_id	int(20)			No	None				
+	3	in_time	varchar(200)	utf8_general_ci		Yes	NULL			
+	4	out_time	varchar(150)	utf8_general_ci		Yes	NULL			
+	5	total_duration	varchar(100)	utf8_general_ci		Yes	NULL
+
+#	Name	Type	Collation	Attributes	Null	Default	Comments	
+	1	task_id Primary	int(50)			No	None		AUTO_INCREMENT	
+	2	t_title	varchar(120)	utf8_general_ci		No	None			
+	3	t_description	text	utf8_general_ci		Yes	NULL			
+	4	t_start_time	varchar(100)	utf8_general_ci		Yes	NULL				
+	5	t_end_time	varchar(100)	utf8_general_ci		Yes	NULL		
+	6	t_user_id	int(20)			No	None				
+	7	status	int(11)			No	0	0 = incomplete, 1 = In progress, 2 = complete
+
+#	Name	Type	Collation	Attributes	Null	Default	Comments	
+	1	user_id Primary	int(20)			No	None		AUTO_INCREMENT		
+	2	fullname	varchar(120)	utf8_general_ci		No	None				
+	3	username	varchar(100)	utf8_general_ci		No	None				
+	4	email	varchar(100)	utf8_general_ci		No	None				
+	5	password	varchar(100)	utf8_general_ci		No	None				
+	6	temp_password	varchar(100)	utf8_general_ci		Yes	NULL				
+	7	user_role	int(10)			No	None		

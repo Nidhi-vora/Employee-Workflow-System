@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>2256_Assignment1</title>
+
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
+    </script>
+
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script>
+
+        //1
+
+        $(document).ready(function () {
+            $(".btn_ins").dblclick(function () {
+
+                var inputVal = $("input").val();
+
+                alert("you entered : " + inputVal);
+            });
+
+
+
+            //2
+
+            $(".key").keypress(function () {
+                $(".key").keyup(function () {
+                    $(".keybd").text($("input.key").val());
+                });
+
+            });
+
+        });
+
+
+
+        //3
+
+        $(document).ready(function () {
+            setInterval(function () {
+                $(".blink").fadeOut(function () {
+                    $(this).fadeIn();
+                });
+            }, 100)
+        });
+
+
+
+        //4
+        $(document).ready(function () {
+            $("h9").click(function () {
+                $("#heading").remove();
+            });
+        });
+
+
+
+        //5
+
+        $(document).ready(function () {
+            $("#book").hover(function () {
+                $('#book').animate({ 'marginLeft': "-=100px" }, 1000);
+
+            });
+        });
+
+
+
+        //6
+
+        $(document).ready(function () {
+            $("#circle").click(function () {
+                let curr_element = $(this);
+                let increase_modifier = 1.5;
+                let curr_elewidth = curr_element.width();
+                let curr_eleheight = curr_element.height();
+
+                curr_element.height(curr_eleheight * increase_modifier);
+                curr_element.width(curr_elewidth * increase_modifier);
+            });
+
+        });
+
+
+
+        //7   
+
+        $(document).ready(function(){
+   $("#fdin").click(function(){
+   //$("img").hide();
+   $("#img_q7").fadeIn(5000);
+   });
+   $("#fdout").click(function(){
+   $("#img_q7").fadeOut(5000);
+   });
+   });
+
+
+
+        //8
+
+        $(document).ready(function () {
+            $("#tgl").click(function () {
+                $("#toggle").slideToggle(1000);
+            });
+        });
+
+
+
+        //9
+
+        $(document).ready(function () {
+            $("#p1").mouseenter(function () {
+                $("#p2").css("background-color", "green");
+                $("#p2").mouseenter(function () {
+                    $("#p3").css("background-color", "red");
+                    $("#p3").mouseenter(function () {
+                        $("#p4").css("background-color", "blue")
+                        $("#p4").mouseenter(function () {
+                            $("#p5").css("background-color", "yellow")
+                        });
+                    });
+                });
+            });
+        });
+
+
+
+        //10
+
+        $(document).ready(function () {
+            $("#underline").each(function () {
+                var text_words =
+                    $(this).text().split(' ');
+
+                $(this).empty().html(function () {
+                    for (i = 0; i < text_words.length; i++) {
+                        if (i === 0) {
+                            $(this).append('<span>'
+                                + text_words[i] + '</span>');
+                        }
+                        else {
+                            $(this).append(' <span>'
+                                + text_words[i] + '</span>');
+                        }
+                    }
+                });
+            });
+        });
+
+
+
+        //11
+
+        $(document).ready(function () {
+            // Get value on button click and show alert
+            $("#myBtn").click(function () {
+                var str = $("#myInput").val();
+                alert(str);
+            });
+        });
+
+
+
+        //12
+
+
+        $(document).ready(function () {
+            $("#col_button").click(function () {
+                var colCount = $("#Table_id tr th").length;
+                alert(colCount);
+                $("#row_button").click(function () {
+                    var rowCount = $("#Table_id tr").length;
+                    alert(rowCount);
+
+                });
+            });
+        });
+
+
+
+        //13
+
+        $(document).ready(function () {
+            $("#qwe").keydown(function () {
+                $("#qwe").css("background-color", "skyblue");
+            });
+            $("#qwe").keyup(function () {
+                $("#qwe").css("background-color", "pink");
+            });
+        });
+
+
+
+
+        //14
+
+        $(document).ready(function () {
+            $('.14').click(function () {
+                var content = $('#addList').val();
+                var fixingContent =
+                    '<li>' + content + '</li>';
+
+                $('.List').append(fixingContent);
+            });
+        });
+
+
+
+
+        //15
+
+
+        $(document).ready(function () {
+            $('.14').click(function () {
+                var content = $('#addList').val();
+                var fixingContent =
+                    '<li>' + content + '</li>';
+
+                // $('.List').append(fixingContent);
+                alert(content);
+            });
+        });
+
+
+
+
+        //16
+
+        $(document).ready(function () {
+            var fruitsArray = ["Purple", "Blue", "Pink", "Green", "Yellow"];
+            $.each(fruitsArray, function (index, value) {
+                $("#array").append("  " + index + " : " + value);
+            });
+        });
+
+
+
+
+        //17
+
+        $(document).ready(function () {
+            $("#a17").click(function () {
+                $("ol").css({ 'color': 'orange' });
+                setInterval(function () {
+                    $(".blinkul").fadeOut(function () {
+                        $(this).fadeIn();
+                    });
+                }, 5000);
+            });
+        });
+
+        //18
+
+        $(document).ready(function () {
+            $("#q18").keypress(function () {
+                $(".shape").css('position', 'static');
+            });
+
+        });
+
+
+
+
+        //19
+
+        $(document).ready(function () {
+            $("#adddrop").click(function () {
+                var addDrop = $("#q19").val();
+                $(".Selected").append($("<option></option>").append(addDrop));
+            });
+        });
+
+        //20
+
+        $(document).ready(function () {
+            var max_length = 30;
+            $('textarea').keyup(function () {
+                var len = max_length - $(this).val().length;
+                $('.GFG').text(len);
+            });
+
+        });
+
+
+
+
+        //21
+
+        $(document).ready(function () {
+            $("#evt_color").change(function () {
+                $("#someDiv").css("background-color", $(this).val());
+            });//.change();
+        });
+
+
+
+
+        //22
+        // $(document).ready(function(){
+        //         $( "#other" ).click(function() {
+        //             $( "#target" ).scroll();
+        //     });
+        //         });
+        $(document).ready(function () {
+            $("#click").click(function () {
+                $('html, body').animate({
+                    scrollTop: $(this).offset().top
+                }, 2000);
+            });
+        });
+
+
+
+
+        //23
+
+        $(document).ready(function () {
+            $("#my_cs_menu").mouseenter(function () {
+                // $("#my_cs_menu").css("text","bold"); 
+                $("#my_cs_menu").menu(function () {
+                    $("#my_cs_menu").css("font-weight", "bold");
+                });
+            });
+        });
+
+
+
+
+        //24
+
+        $(document).ready(function () {
+            $("#a124").mousemove(function () {
+                $("#a124").text("Hello");
+            });
+        });
+
+
+
+
+        //25
+
+        $(document).ready(function () {
+            $("#btn_25").click(function () {
+
+                $("#div_25").fadeIn(2000);
+            });
+        });
+
+
+
+
+        //26
+
+        $(document).ready(function () {
+
+            $("#btn_26").click(function () {
+                $("#a126shape").effect("bounce", { times: 6 }, 900);
+            });
+
+        });
+
+
+
+
+        //27
+
+        $(document).ready(function () {
+            $("#btn_q27").click(function () {
+
+                var inputVal27 = $("#get_txt").val();
+
+                $("#q27").text(inputVal27);
+                var bw27 = $("#get_bw").val();
+
+                $("#q27").css("border-width", bw27);
+                var fs27 = $("#get_ts").val();
+                $("#q27").css("font-size", 25);
+                var w27 = $("#get_tw").val();
+                $("#q27").css("width", w27);
+
+            });
+        });
+
+
+
+
+        //28
+
+        $(document).ready(function () {
+            $(".btn_28").click(function () {
+
+                var demo = "Previous-height: " + $("#div_28").height(); + "px";
+                $("#28_p").text(demo);
+
+                var newHeight = $(".inp_28").val();
+                $(".c_28").height(newHeight);
+
+                demo = "New-height: " + $("#div_28").height(); + "px";
+                $("#28_p2").text(demo);
+            });
+        });
+
+        $(document).ready(function () {
+            $(".btn2_28").click(function () {
+
+                var demo = "Previous-width: " + $("#div_28").width(); + "px";
+                $("#1_28").text(demo);
+
+                var newWidth = $(".inp2_28").val();
+                $(".c_28").width(newWidth);
+
+                demo = "New-width: " + $("#div_28").width(); + "px";
+                $("#2_28").text(demo);
+            });
+        });
+
+
+
+
+        //29
+
+        $(document).ready(function () {
+            $("#btn_29").click(function () {
+
+                var demo = "Previous-height: " + $("#div_29").innerHeight(); + "px";
+                $("#29_p").text(demo);
+
+                var newHeight = $(".inp_29").val();
+                $("#div_29").innerHeight(newHeight);
+
+                demo = "New-height: " + $("#div_29").innerHeight(); + "px";
+                $("#29_p2").text(demo);
+            });
+        });
+
+        $(document).ready(function () {
+            $("#btn2_29").click(function () {
+
+                var demo = "Previous-innerWidth: " + $("#div_29").innerWidth(); + "px";
+                $("#1_29").text(demo);
+
+                var newHeight = $(".inp2_29").val();
+                $("#div_29").innerWidth(newHeight);
+
+                demo = "New-innerWidth: " + $("#div_29").innerWidth(); + "px";
+                $("#2_29").text(demo);
+            });
+        });
+
+
+
+
+
+        //31
+        $(document).ready(function () {
+            $("#btn_31a").click(function () {
+                $("#a131shape").animate({ width: "300px", height: "300px", opacity: "0.5" }, 1500);
+            });
+        });
+        $(document).ready(function () {
+            $("#btn_31r").click(function () {
+                $("#a131shape").animate({ width: "100px", height: "100px" }, 1500);
+            });
+        });
+
+
+
+
+        //32
+        $(document).ready(function() {
+            $("#btn_q32").click(function() {
+                $(".q32").animate({
+                    height: '50px',
+                    width: '100px',
+                    right : 150
+                });
+                $(".circle").css("border-radius","50%");
+                $(".circle").css("opacity","0.5");
+                
+
+            });
+
+        });
+
+
+    </script>
+
+
+    <style>
+        #circle {
+            background: rosybrown;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+
+
+        #a9 {
+            width: 500px;
+            height: 30px;
+            font-weight: bold;
+            font-size: 20px;
+
+        }
+
+        #underline {
+            text-decoration: underline;
+            font-family:cursive;
+            font-size:20px;
+            color:hotpink;
+            
+        }
+
+        #que {
+            color: #3b9c9c;
+           
+            font-size:30px;
+            font-family:monospace;
+        }
+
+        #heading {
+            color: brown;
+
+        }
+
+
+        .ui-menu {
+            width: 8em;
+        }
+
+        #a124 {
+            width: 380px;
+            padding: 20px;
+            height: 60px;
+            border: 2px solid green;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        button {
+            position: relative;
+            top: 50%;
+            background-color: #bf40bf;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 15px;
+            min-height: 30px;
+            min-width: 120px;
+            font-size: 15px;
+
+        }
+
+        button:hover {
+            background-color: #5390f5;
+        }
+img{
+
+    position: relative;
+}
+        /* 18 */
+        .shape {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: relative;
+            animation-name: shape;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes shape {
+            0% {
+                background-color: blue;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: blue;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-color: blue;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: blue;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        #a126shape {
+            width: 100px;
+            height: 100px;
+            background: seagreen;
+        }
+
+        #div_28 {
+            height: 230px;
+            width: 320px;
+            border: 2px solid black;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .c_28 {
+            background: rgb(215, 205, 238);
+            border: 1px solid rgb(8, 238, 142);
+            color: rgb(5, 5, 5);
+        }
+
+        #div_29 {
+            background: #8d175c;
+            height: 100px;
+            width: 100px;
+            border: 5px solid rgb(180, 78, 117);
+            border-radius: 50%;
+            margin: 6px;
+        }
+
+        #a131shape {
+            background: #ffd700;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            margin: 6px;
+        }
+
+        /* #box32 {
+            background:;
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            margin: 6px;
+        } */
+        .q32 {
+            background-color: #c34a2c;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            position: relative;
+            margin:150px;
+           
+        }
+        #q27 {
+            border: 3px solid;
+            font-family: cursive;
+            font-size: 15px;
+            color: black
+        }
+
+        #title{
+ text-decoration:underline;
+ font-size:40px;
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <center>
+        <h2 id="title" style="color:#ff69b4"><b>JQuery Assignment</b></h2>
+        </center><br><br>
+    <!-- 1 .Take the paragraph from user and Insert it on button double 
+  click -->
+
+    <h2 id="que">1 . Take the paragraph from user and Insert it on button double click.</h2>
+    <br><br>
+    <p id="format">Enter The Text:</p>
+    <input type="text" class="paragraph">
+
+    <span></span>
+    <p id="format">Double-click on this button.</p>
+    <button class="btn_ins">Insert</button><br>
+    <p id="1"></p><br><br><br><br>
+
+
+
+    <!-- 2. Display the keyboard key which was pressed in a textbox. -->
+    <h2 id="que">2. Display the keyboard key which was pressed in a textbox.</h2>
+    <br><br><br><br>
+    <label for="">Enter Key:</label>
+    <input type="text" class="key">
+    <br><br>
+    <br><label for="key_name">You Pressed Key: </label><kbd class="keybd"></kbd>
+    <br><br><br><br>
+
+
+    <!-- 3 . Find the span Element in the document and change the blink 
+    the text. -->
+    <h2 id="que"> 3 . Find the span Element in the document and change the blink the text.</h2>
+    <br><br><br><br>
+    <h1 id="pr3">WT2 <span class="blink">ASSIGNMENT 1</span> jQuery</h1>
+    <br><br><br><br>
+
+
+
+    <!-- 4. Create 6 heading and remove the heading which is next to h4 heading -->
+
+    <h2 id="que">4. Create 6 heading and remove the heading which is next to h4 heading</h2>
+    <br><br><br><br>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <div id="heading">
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+    </div>
+    <br>
+    <h9>Click Here To Remove</h9>
+    <br><br><br><br>
+
+
+    <!-- 5.Insert an image in the document on mouse hover move the image left side -->
+    <h2 id="que">5. Insert an image in the document on mouse hover move the image left side.</h2>
+    <br><br><br>
+    <!-- <div style="text-align : center;">
+        <img src="book.jpg" class="book"alt="Rose" height="250" width="400" position="center">
+        </div> -->
+    <img id="book" src="book.jpg" height="250" width="200" alt="background image1">
+    <br><br><br><br>
+
+
+
+    <!-- 6. On click button increase height and width of round shape 
+        using jQuery.     -->
+    <h2 id="que">6. On click button increase height and width of round shape using jQuery.</h2>
+    <br><br><br><br>
+    <h3>Click the circle.</h3>
+    <div id="circle"></div>
+    <br><br><br><br>
+
+
+
+    <!-- 7. Show fad in fade out effect after 5 second on image    -->
+    <h2 id="que"> 7. Show fade in fade out effect after 5 second on image</h2>
+    <br><br><br><br>
+    <img src="book1.jpg" id="img_q7" alt="bg image" height="150px">
+    <br>
+    <br>
+    <center>
+    <button id="fdin">fade in</button>
+    
+    <button id="fdout">fade out</button>
+    </center>
+
+
+
+    <!-- 8. Toggle between slid up and slide down  -->
+    <h2 id="que"> 8. Toggle between slid up and slide down</h2>
+    <br><br>
+    <p id="toggle">BOOKS ARE THE MOST LOYAL AND TRUSTED FRIENDS YOU CAN EVER HAVE.</p>  <br>
+    <button id="tgl">Toggle slideUp() and slideDown()</button>
+    <br><br><br><br>
+
+
+
+    <!-- 9. Create 5 paragraph and on mouse Enter Event highlight the next paragraph.  -->
+    <h2 id="que"> 9. Create 5 paragraph and on mouse Enter Event highlight the next paragraph.</h2>
+    <br><br><br><br>
+    // Mouse Enter On One By One Paragraph.
+    <div id="a9">
+        <p id="p1">NIDHI VORA</p>
+        <p id="p2">ROLL NO 2256</p>
+        <p id="p3">DIVISION C</p>
+        <p id="p4">CODE : WEB TECHNOLOGY 2</p>
+        <p id="p5">K.S.SCHOOL OF BUSINESS MANAGEMENT</p>
+    </div>
+    <br></br> <br></br> <br></br> <br></br><br><br>
+    <br><br><br><br>
+
+
+
+    <!-- 10. Underline all the words of a text using jQuery -->
+    <h2 id="que">10. Underline all the words of a text using jQuery</h2>  <br><br><br><br>
+    <p id="underline">No man can be called friendless who has God and the companshionship of good books</p>
+    <br><br><br><br>
+
+
+
+    <!-- 11.How to get the value of a textbox using jQuery? -->
+    <h2 id="que">11.How to get the value of a textbox using jQuery</h2>  <br><br><br><br>
+    Enter The Text:
+    <input type="text" id="myInput">  <br><br><br><br>
+    <button type="button" id="myBtn">Show Value</button>
+    <br><br><br><br>
+
+
+
+    <!-- 12.Count number of rows and columns in a table using jQuery -->
+    <h2 id="que"> 12.Count number of rows and columns in a table using jQuery</h2>  <br><br><br><br>
+    <table id="Table_id" border="1" width="140">
+        <thead>
+            <tr style="background:pink;">
+                <th>I'd</th>
+                <th>Name</th>
+                <th>Subject</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Nidhi</td>
+                <td>Python</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Moxa</td>
+                <td>Java</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Neha</td>
+                <td>jQuery</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Priya</td>
+                <td>C#</td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br><br>
+    <button id="col_button"> Count Columns </button>
+    <button id="row_button">Count rows</button>
+    <br><br><br><br>
+
+
+
+
+    <!-- 13.On Key Down Event Add text on one Division also highlight the color of textbox -->
+    <h2 id="que">13.On Key Down Event Add text on one Division also highlight the color of textbox</h2>
+    <br><br><br><br>
+    Enter The Text : <input type="text" id="qwe">
+    <br><br><br><br>
+
+
+
+    <!-- 14.On submit event add the new item on list as per user input. -->
+    <h2 id="que">14.On submit event add the new item on list as per user input.</h2>
+    <br><br><br><br>
+    <h3> Type List to Add</h3>
+    <input type="text" id="addList"><br><br><br>
+    <button class="14">Submit</button>
+    <ul class="List"></ul>
+    <br><br><br><br>
+
+
+
+    <!-- 15.Show each item of above list on alert box -->
+    <h2 id="que">15.Show each item of above list on alert box</h2>
+    <br><br><br><br>
+    Alert box is showing the output of question number 15.
+    <br><br><br><br>
+
+
+
+    <!-- 16.Create an array of the color display it on paragraph. -->
+    <h2 id="que">16.Create an array of the color display it on paragraph.</h2>
+    <br><br><br><br>
+    <p id="array"></p>
+    <br><br><br><br>
+
+
+
+
+    <!-- 17.Create one order list start with 5 give the orange color on that list after 5 second also blink that list -->
+    <h2 id="que">17.Create one order list start with 5 give the orange color on that list after 5 second also blink that
+        list</h2>  <br><br><br><br>
+    <div class="blinkul">
+        <ol type="1" start="5">
+
+            <li>C</li>
+            <li>C++</li>
+            <li>Python</li>
+            <li>java</li>
+            <li>c#</li>
+        </ol>
+    </div>  <br><br><br>
+    <button id="a17">Change Color</button>
+    <br><br><br><br>
+
+
+
+
+    <!-- 18. Move the shape in the page until user not press any key from keyboard. -->
+    <h2 id="que">18.Move the shape in the page until user not press any key from keyboard.</h2>
+    <br><br><br><br>
+    <div class="shape"></div><br><br><br><br><br><br><br><br><br><br><br><br>
+    <p> press any key to stop : </p>
+    <input type="text" id="q18">  <br><br><br><br>
+
+
+
+
+    <!-- 19. Take input from user and add new item into dropdown using jQuery. -->
+    <h2 id="que">19. Take input from user and add new item into dropdown using jQuery.</h2>
+    <br><br><br><br>
+    <select class="Selected">
+        <option>Green</option>
+        <option>Red</option>
+        <option>Blue</option>
+    </select><br><br>
+    Enter The Item Which You Want To Add :
+    <input type="text" id="q19"><br><br><br>
+    <button id="adddrop">Click me to add</button>
+    <br><br><br><br>
+
+
+
+    <!-- 20. Limit character input in the text area including count -->
+    <h2 id="que">20. Limit character input in the text area including count</h2>
+    <br><br><br><br>
+    //you can enter 30 character only.<br>
+    <p id="20">Maximum input characters:30</p>
+    <textarea maxlength="30"></textarea>
+    <p id="20">
+        <span class="GFG">30</span>
+        Characters Remaining
+    </p>  <br><br><br><br>
+
+
+
+    <!-- 21. Create the dropdown box having different the color and based on selected color change the color of
+        shape. -->
+    <h2 id="que">21. Create the dropdown box having different the color and based on selected color change the color of
+        shape.</h2>  <br><br><br><br>
+
+    //Choose A Color From The List :<br><br>
+    <select id="evt_color">
+        <option value="#3366CC">Blue</option>
+        <option value="#FF9CB3">Pink</option>
+        <option value="#EA4A4A">Red</option>
+        <option value="#9932cc">purple</option>
+        <option value="#708090">slategray</option>
+        <option value="#bc8f8f">rosybrown</option>
+        <option value="#4bb64f">Green</option>
+        <option value="#ed9d2b">Orange</option>
+    </select><br><br>
+    <div id="someDiv">Change color here.......</div>
+    <br><br><br><br>
+    <br>
+
+
+
+
+    <!-- 22. On scroll event slide the text on current page. -->
+    <h2 id="que">22. On scroll event slide the text on current page.</h2>  <br><br><br><br>
+    <div id="div2">
+        <p style=color:hotpink;font-size:20px;font-family:cursive><b> Scroll The Text On current Page</b></p><br>
+        <button id="click">Click me to Scroll</button>
+        <br><br><br><br>
+        <!-- <div id="target" style="overflow: scroll; width: 200px; height: 100px;">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit
+        esse cillum dolore eu fugiat nulla pariatur. Excepteur
+        sint occaecat cupidatat non proident, sunt in culpa qui
+        officia deserunt mollit anim id est laborum.
+      </div>
+      <div id="other">
+        Trigger the handler
+      </div> -->
+        <!-- <button id="btn_22">Return the vertical position of the scrollbar</button>   -->
+
+
+
+        <!-- 23. Create one menu and on mouse Enter bold the text. -->
+        <h2 id="que">23. Create one menu and on mouse Enter bold the text.</h2>
+        <br><br><br><br>
+        <ul id='my_cs_menu'>
+
+            <li>
+                <div>My Books</div>
+            </li>
+
+            <li>
+                <div>Browse</div>
+                <ul>
+                    <li>
+                        <div>Subject</div>
+                    </li>
+                    <li>
+                        <div>Lists</div>
+                    </li>
+                    <li>
+                        <div>Random Book</div>
+                    </li>
+                    <li>
+                        <div>Collections</div>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <div>Community</div>
+                <ul>
+                    <li>
+                        <div>Group</div>
+                        <ul>
+                            <li>
+                                <div>Quotes</div>
+                            </li>
+                            <li>
+                                <div>Ask The Author</div>
+                            </li>
+                            <li>
+                                <div>Library Explore</div>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <div>More</div>
+            </li>
+        </ul>
+        <br><br><br><br>
+
+
+
+
+        <!-- 24. On mouse move print the text hello. -->
+        <h2 id="que">24. On mouse move print the text hello.</h2>
+        <br><br><br><br>
+        Move mouse on this Box<br>
+        <div id="a124"></div>
+        <br><br><br><br>
+
+
+
+        <!-- 25. On page load show loading effect. -->
+        <h2 id="que">25. On page load show loading effect.</h2>
+  <br><br><br><br>
+        <button id="btn_25">Load</button>
+        <div id="div_25" style="display:none;">
+
+            <h1>JQuery Page Loading Effect</h1>
+            <p id="25" style="font-size :20px;">
+                This is page loading effect with JQuery<br>
+        </div>
+        <br><br><br><br>
+
+
+
+        <!-- 26. On Button Click bounce the shape -->
+        <h2 id="que">26. On Button Click bounce the shape</h2>
+        <br><br><br><br>
+        <div id="a126shape"></div><br><br>
+        <button id="btn_26"> Bounce </button>
+        <br><br><br><br>
+
+
+
+
+        <!-- 27. Take the Text, Border width ,text size and width from user and as per the input set the value
+        of paragraph -->
+        <h2 id="que">27. Take the Text, Border width ,text size and width from user and as per the input set the value
+            of paragraph</h2>  <br><br><br><br>
+        <h4> Add text : </h4>
+        <input type="text" id="get_txt">
+        <h4> Add border width : </h4>
+        <input type="text" id="get_bw">
+        <h4> Add text size : </h4>
+        <input type="text" id="get_ts">
+        <h4> Add text width : </h4>
+        <input type="text" id="get_tw">
+        <p id="q27"></p>
+        <br><br><br>
+        <button id="btn_q27">Click To Change</button>
+        <br><br><br><br>
+
+
+
+
+        <!-- 28. Get outer height and width from user and set it on division. -->
+        <h2 id="que">28. Get outer height and width from user and set it on division.</h2>
+        <br><br><br><br>
+        <div id="div_28" class="c_28">
+            Books are an important part of our life. They are the stepping stones towards knowledge. We are invariably
+            dependent on books at every stage of our lives, be it in physical or digital form.Books enhance our mind
+            with knowledge and good thoughts, just like a good friend.if we want to choose a best friend for our life
+            then, it’s time to select books as our best friend because books can provide us companionship in our best
+            and worst time and teach us a lesson.
+        </div> <br><br><br>
+        <input type="text" class="inp_28">
+        <input type="text" class="inp2_28">
+        <button class="btn_28">Set Height</button>
+        <button class="btn2_28">Set Width</button>
+        <p id="28_p"></p>
+        <p id="28_p2"></p>
+
+        <p id="1_28"></p>
+        <p id="2_28"></p>
+        <br><br><br><br>
+
+
+
+
+        <!-- 29. Get Inner height and width from user and set it on shape. -->
+        <h2 id="que">29. Get Inner height and width from user and set it on shape.</h2>
+        <br><br><br><br>
+        <input type="text" class="inp_29">
+        <input type="text" class="inp2_29">
+
+        <button id="btn_29">Set Height</button>
+        <button id="btn2_29">Set Width</button>
+        <br>
+        <p id="29_p"></p>
+        <p id="29_p2"></p>
+        <p id="1_29"></p>
+        <p id="2_29"></p>
+        <div id="div_29"></div>
+        <br><br><br><br>
+
+
+
+
+        <!-- 31. On click change the round shape (increase height, width) and make it aging on actual position. -->
+        <h2 id="que">31. On click change the round shape (increase height, width) and make it aging on actual position.
+        </h2>
+        <br><br><br><br>
+        <div id="a131shape"></div><br><br>
+        <button id="btn_31a">Animate Height & Width</button>
+        <button id="btn_31r">Reset</button>
+        <br><br><br><br>
+
+
+
+        <!-- 32. On click convert round to oval shape at left side alsodecrease the shape opacity. -->
+        <h2 id="que">32. On click convert round to oval shape at left side alsodecrease the shape opacity.</h2>
+        <br><br><br><br>
+
+        <div class="q32"></div>
+        <br><br><br>
+        <button id="btn_q32">Oval</button>
+
+
+
+
+</body>
+
+</html>

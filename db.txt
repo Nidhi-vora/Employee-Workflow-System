@@ -1,0 +1,29 @@
+
+// upload TABLE
+
+CREATE TABLE upload(
+    id int(11) NOT NULL,
+    fname text NOT NULL,
+    name varchar(200) NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
+ALTER TABLE upload ADD PRIMARY KEY(id);
+ALTER TABLE `upload`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+Expand Requery Edit Bookmark Database : etmsh Queried time : 14:42:50
+ALTER TABLE upload ADD taskid int(50);
+
+//chat TABLE
+ tbl_chh
+#	Name	Type	Collation	Attributes	Null	Default	Comments	Extra	Action
+	1	id	int(10)			No	None			Change Change	Drop Drop	
+	2	username	varchar(10)	utf8mb4_general_ci		No	None			Change Change	Drop Drop	
+	3	msg	varchar(1000)	utf8mb4_general_ci		No	None
+
+// event TABLE
+tbl_event
+
+#	Name	Type	Collation	Attributes	Null	Default	Comments	Extra	Action
+	1	eventid	int(10)			No	None			Change Change	Drop Drop	
+	2	eventname	varchar(50)	utf8mb4_general_ci		No	None			Change Change	Drop Drop	
+	3	discrption	varchar(1000)	utf8mb4_general_ci		No	None			Change Change	Drop Drop	
+	4	date	varchar(50)	utf8mb4_general_ci		No	None
