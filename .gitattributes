@@ -1,2 +1,3 @@
 *.php linguist-language=PHP
 *.css linguist-vendored
+*.scss linguist-vendored
